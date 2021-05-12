@@ -1,0 +1,104 @@
+@import '~antd/lib/style/themes/default.less';
+@ease-in-out-circ: cubic-bezier(0.78, 0.14, 0.15, 0.86);
+.logo {
+  height: 64px;
+  position: relative;
+  line-height: 64px; // padding-left: (@menu-collapsed-width - 32px) / 2;
+  padding-left: 13px;
+  transition: all 0.3s;
+  background: #1f62e6;
+  overflow: hidden;
+  img {
+    display: inline-block;
+    vertical-align: middle;
+    height: 32px;
+    transition: all 0.3s;
+  }
+  h1 {
+    color: white;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0 0 12px; // font-family: 'Myriad Pro', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #ffffff;
+    letter-spacing: 1px;
+    border-left: #fff solid 1px;
+    height: 30px;
+    line-height: 38px;
+    padding-left: 9px;
+    font-family: '微软雅黑';
+  }
+}
+
+.headerMenu {
+  flex: 1 1 0%;
+  :global {
+    .ant-menu-dark .ant-menu-item-selected {
+      background-color: transparent;
+    }
+  }
+}
+
+.miniLogo {
+  .logo;
+  img {
+    height: 20px;
+  }
+}
+
+.sider {
+  min-height: 100vh; // box-shadow: 2px 0 6px rgba(0, 21, 41, 0.25);
+  box-shadow: 2px 0 6px rgba(185, 185, 185, 0.35);
+  position: relative;
+  z-index: 10;
+  &.ligth {
+    background-color: white;
+    .logo {
+      background: white;
+      h1 {
+        color: #002140;
+      }
+    }
+  }
+}
+
+.icon {
+  width: 14px;
+  margin-right: 10px;
+}
+
+:global {
+  .drawer .drawer-content {
+    background: #001529;
+  }
+  .ant-layout-sider {
+    background: #fff;
+  }
+  .ant-menu-inline,
+  .ant-menu-vertical,
+  .ant-menu-vertical-left {
+    border-right: 0;
+  }
+  .ant-menu-inline .ant-menu-selected:after,
+  .ant-menu-inline .ant-menu-item-selected:after,
+  .ant-menu-inline .ant-menu-item:after {
+    right: unset;
+    left: 0;
+    border-width: 4px;
+  }
+  .ant-menu-inline-collapsed {
+    & > .ant-menu-item .sider-menu-item-img + span,
+    & > .ant-menu-item-group > .ant-menu-item-group-list > .ant-menu-item .sider-menu-item-img + span,
+    & > .ant-menu-submenu > .ant-menu-submenu-title .sider-menu-item-img + span {
+      max-width: 0;
+      display: inline-block;
+      opacity: 0;
+    }
+  }
+  .ant-menu-item .sider-menu-item-img + span,
+  .ant-menu-submenu-title .sider-menu-item-img + span {
+    transition: opacity 0.3s @ease-in-out, width 0.3s @ease-in-out;
+    opacity: 1;
+  }
+}

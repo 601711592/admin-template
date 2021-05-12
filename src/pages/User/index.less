@@ -1,0 +1,192 @@
+@import '~antd/lib/style/themes/default.less';
+.layout_bg {
+    background-image: linear-gradient(-46deg, #3a46e1 0%, #1f62e6 100%);
+    padding: 15px;
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+.layout {
+    position: relative;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: #fff;
+    overflow: auto; // background: #f0f2f5;
+    .content {
+        flex: 1 1;
+        padding: 50px 0 24px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        align-content: center;
+        .main {
+            width: 464px;
+            margin: 0 auto;
+            margin-top: 50px;
+            :global {
+                .ant-form-item {
+                    margin-bottom: 36px;
+                }
+                .ant-input:not(:first-child) {
+                    padding-left: 35px;
+                }
+                .ant-input-prefix {
+                    left: 0;
+                    i {
+                        font-size: 20px;
+                        color: #333;
+                    }
+                }
+                .ant-form-explain {
+                    margin-top: 15px;
+                }
+                .ant-form-item-with-help {
+                    margin-bottom: 0px;
+                }
+            }
+            input {
+                line-height: 60px;
+                height: 60px;
+                border: none;
+                border-bottom: 1px solid #d5d5d5;
+                border-radius: 0;
+                font-size: 14px;
+            }
+            input:focus {
+                border-bottom: 2px solid #1f62e6;
+                outline: 0;
+                box-shadow: none;
+            }
+            .button {
+                text-align: center;
+                margin-top: 36px;
+            }
+            button {
+                width: 368px;
+            }
+        }
+    }
+}
+
+.colors {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    .color_1 {
+        background: #397ce1;
+        width: 20%;
+        padding-bottom: 20%;
+        position: absolute;
+        left: -10%;
+        top: -10%;
+        border-radius: 50%;
+        z-index: 10;
+    }
+    .color_2 {
+        background: #02cbfe;
+        width: 10%;
+        padding-bottom: 10%;
+        position: absolute;
+        left: 40%;
+        top: -5%;
+        border-bottom-right-radius: 300%;
+        border-bottom-left-radius: 40%;
+        border-top-left-radius: 300%;
+        border-top-right-radius: 40%;
+        z-index: 10;
+    }
+    .color_3 {
+        background: #4a99ff;
+        width: 1%;
+        padding-bottom: 20%;
+        position: absolute;
+        left: 54%;
+        top: -15%;
+        border-radius: 100%;
+        transform: rotate(39deg);
+        z-index: 10;
+    }
+    .color_4 {
+        bottom: -30%;
+        background: #ffc43b;
+        width: 16%;
+        padding-bottom: 22%;
+        position: absolute;
+        right: 2%;
+        border-radius: 100%;
+        transform: rotate(39deg);
+        z-index: 10;
+    }
+    .color_5 {
+        background: #37e0ef;
+        width: 6%;
+        padding-bottom: 20%;
+        position: absolute;
+        right: -4%;
+        bottom: -9%;
+        border-radius: 100%;
+        transform: rotate(-48deg);
+        z-index: 8;
+    }
+}
+
+.logo{
+    position:absolute;
+    left: 133px;
+    top: 69px;
+}
+
+.prefixIcon {
+    font-size: @font-size-base;
+    color: @disabled-color;
+}
+
+.top {
+    text-align: center;
+    width: 100%;
+}
+
+.header {
+    height: 44px;
+    line-height: 44px;
+    text-decoration: none;
+    font-size: 35px;
+    color: #262626;
+}
+
+.logo {
+    height: 44px;
+    vertical-align: top;
+    margin-right: 16px;
+}
+
+.title {
+    font-size: 33px;
+    color: @heading-color;
+    font-family: Avenir, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    position: relative;
+    top: 2px;
+}
+
+.desc {
+    font-size: @font-size-base;
+    color: @text-color-secondary;
+    margin-top: 12px;
+    margin-bottom: 40px;
+}
+
+.submit {
+    width: 100%;
+    margin-top: 24px;
+}
+
+.checkbox {
+    text-align: right;
+    margin-top: -22px;
+}

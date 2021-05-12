@@ -1,0 +1,5 @@
+  
+  {name}Page: 'POST /api/v1/{name}/page', //{cname}分页
+  {name}Add: 'POST /api/v1/{name}/add', //添加{cname}
+  {name}Update: 'POST /api/v1/{name}/update/:id', //更新{cname}
+  {name}Del: '/api/v1/{name}/del/:id', //删除{cname}
